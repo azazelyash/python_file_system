@@ -83,8 +83,8 @@ class FileSystem:
 
     def cp(self, src, dst):
         # Copy a file or directory to a new destination
-        src_node = self.root.search(src)
-        dst_node = self.root.search(dst)
+        src_node = self.root.search((src) if src.startswith('/') else (self.path + '/' + src))
+        dst_node = self.root.search((dst) if dst.startswith('/') else (self.path + '/' + dst))
 
         if src_node is None or dst_node is None:
             print("Invalid source or destination path.")

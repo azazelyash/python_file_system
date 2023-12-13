@@ -4,8 +4,17 @@ from utils.file_systems import FileSystem
 
 def main():
     print("|--------------Welcome to the In-Memory File System--------------|")
-    print("List of Commands: mkdir, ls, cd, cat, touch, echo, mv, cp, rm, grep")
-    print("Type 'exit' to exit the program\n")
+    print("mkdir [directory_name]: Create a new directory.")
+    print("ls: List files and directories in the current directory.")
+    print("cd [path]: Change the current directory.")
+    print("cat [file name]: Display the content of a file.")
+    print("touch [file name]: Create a new file.")
+    print("echo [file name] [text]: Write text to a file.")
+    print("mv [source] [destination]: Move a file or directory.")
+    print("cp [\"/\"source] [\"/\"destination]: Copy a file or directory.")
+    print("rm [file_or_directory path]: Remove a file or directory.")
+    print("grep [file_name] [pattern]: Search for a pattern in a file.")
+    print("exit: Exit the file system.\n")
 
     fs = FileSystem()
     
