@@ -18,6 +18,7 @@ Welcome to the In-Memory File System! This project provides a simple in-memory f
 
 ## Features
 
+- Saves the state, so that when you restart your program all the changes remain persistant
 - Create, delete, and navigate directories.
 - Create, read, update, and delete files.
 - Move and copy files and directories.
@@ -26,3 +27,7 @@ Welcome to the In-Memory File System! This project provides a simple in-memory f
 ## Video Demo
 
 <img src="InMemoryFileSytem.gif" alt="Video Demo">
+
+## Bug Fix
+
+If your state is not managed then check you desktop directory location and if it is different than ``` C:\Users\{USER}\Desktop ``` then in file_systems.py, on line 16 add the change before "Desktop", for example ``` some_folder_name/OneDrive/Desktop ```.
